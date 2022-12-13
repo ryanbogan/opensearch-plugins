@@ -1,26 +1,21 @@
 - [Plugin Naming Conventions](#plugin-naming-conventions)
-    - [GitHub](#github)
-        - [OpenSearch Plugins](#opensearch-plugins)
-        - [OpenSearch Dashboard Plugins](#opensearch-dashboard-plugins)
-    - [Metadata](#metadata)
-        - [OpenSearch Plugins](#opensearch-plugins)
-        - [OpenSearch Dashboard Plugins](#opensearch-dashboard-plugins)
-    - [Artifacts](#artifacts)
-        - [OpenSearch Plugins](#opensearch-plugins)
-        - [OpenSearch Dashboards Plugins](#opensearch-dashboards-plugins)
-    - [Folders](#folders)
-        - [OpenSearch Plugins](#opensearch-plugins)
-        - [OpenSearch Dashboard Plugins](#opensearch-dashboard-plugins)
-    - [Classes](#classes)
-    - [Settings](#settings)
-    - [APIs](#apis)
-    - [Indices](#indices)
-    - [Identifiers](#identifiers)
-    - [Variables](#variables)
+  - [GitHub](#github)
+    - [OpenSearch Plugins](#opensearch-plugins)
+    - [OpenSearch Dashboard Plugins](#opensearch-dashboard-plugins)
+  - [Metadata](#metadata)
+    - [OpenSearch Plugins](#opensearch-plugins-1)
+    - [OpenSearch Dashboard Plugins](#opensearch-dashboard-plugins-1)
+  - [Artifacts](#artifacts)
+    - [OpenSearch Plugins](#opensearch-plugins-2)
+    - [OpenSearch Dashboards Plugins](#opensearch-dashboards-plugins)
+  - [Classes](#classes)
+  - [Settings](#settings)
+  - [APIs](#apis)
+  - [Indices](#indices)
+  - [Identifiers](#identifiers)
+  - [Variables](#variables)
 
 ## Plugin Naming Conventions
-
-These are _recommended_ plugin naming conventions. YMMV.
 
 ### GitHub
 
@@ -82,18 +77,6 @@ For example, [dashboards-notebooks/opensearch_dashboards.json](https://github.co
 #### OpenSearch Dashboards Plugins
 
 - Artifacts are of the `<package name>-<version>` format, e.g. `notebooks-dashboards-1.0.0.0-beta1.zip`.
-
-### Folders
-
-#### OpenSearch Plugins
-
-- Always use kebab-case.
-- Include full plugin name, e.g. `plugins/opensearch-knn`.
-
-#### OpenSearch Dashboard Plugins
-
-- Always use kebab-case.
-- Include full plugin name, e.g. `plugins/notebooks-dashboards`. The change to automatically convert folders to kebab-case is still pending, see [OpenSearch-Dashboards#322](https://github.com/opensearch-project/OpenSearch-Dashboards/issues/322).
 
 ### Classes
 

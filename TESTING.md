@@ -13,6 +13,9 @@
   - [Backwards Compatibility Testing](#backwards-compatibility-testing)
     - [Types of BWC tests](#types-of-bwc-tests)
     - [Hooking the BWC tests to CI](#hooking-the-bwc-tests-to-ci)
+    - [BWC Version test matrix](#bwc-version-test-matrix)
+  - [Gradle Plugins](#gradle-plugins)
+    - [Distribution Download Plugin](#distribution-download-plugin)
 <!-- TOC -->
 
 ## Testing
@@ -100,3 +103,22 @@ Each plugin can test various functionalities in their bwc tests and add more sce
 The bwc tests can be hooked to the CI workflow in the plugin to run it with each pull request and push. 
 
 See [anomaly-detection#181](https://github.com/opensearch-project/anomaly-detection/pull/181) for more information.
+
+#### BWC Version test matrix
+
+The bwc tests should follow the OpenSearch's [support model](https://opensearch.org/faq#q3.28), in this way the last major version's most recent minor version should be tested.  Additionally all minor versions of the current major version should also be tested.
+
+At the time of this writing there are OpenSearch releases for 1.0, 1.1, 1.2, 1.3, and 2.0.  To ensure bwc tests have appropriate coverage when building components for 2.1, the bwc test matrix should include 1.3, and 2.0.
+
+When minor build version number bumps are made the bwc test matrix should include all previous minor versions of the same major version.
+
+When major build version number bumps are made the bwc test matrix will remove the previous major version, and only support the single most recently released major & minor version.
+
+### Gradle Plugins
+
+#### Distribution Download Plugin
+
+The Distribution Download plugin downloads the latest version of OpenSearch by default, and supports overriding this behavior by setting `customDistributionUrl`. This will help to pull artifacts from custom location for testing during release process.
+```
+./gradlew integTest -PcustomDistributionUrl="https://ci.opensearch.org/ci/dbc/bundle-build/1.2.0/1127/linux/x64/dist/opensearch-1.2.0-linux-x64.tar.gz"
+```

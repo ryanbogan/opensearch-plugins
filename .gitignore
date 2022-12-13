@@ -3,7 +3,7 @@
 /anomaly-detection-dashboards-plugin/
 /anomaly-detection/
 /asynchronous-search/
-/dashboards-notebooks/
+/common-utils/
 /dashboards-reports/
 /dashboards-visualizations/
 /index-management-dashboards-plugin/
@@ -12,9 +12,14 @@
 /k-nn/
 /notifications/
 /performance-analyzer/
+/performance-analyzer-rca/
 /security-dashboards-plugin/
 /security/
 /sql/
 /trace-analytics/
+/observability/
 /node_modules/
 /cross-cluster-replication/
+/ml-commons/
+/geospatial/
+/opensearch-oci-object-storage/
